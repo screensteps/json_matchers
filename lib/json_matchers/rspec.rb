@@ -18,7 +18,7 @@ DEPRECATION:
 WARN
   end
 
-  assertion = JsonMatchers::Assertion.new(schema_name.to_s, options)
+  assertion = JsonMatchers::Assertion.new(schema_name.to_s, **options)
 
   match do |json|
     assertion.valid?(json)
